@@ -1,7 +1,20 @@
 <html>
 <body>
-  <div class="Absolute-Center">
-    Hello Electron World!!
+  <div class="row ml-0 mr-0">
+    <div class="col">
+      <button type="button ml-1 mr-1" class="font-weight-bold btn-text-small btn btn-outline-dark" 
+      (click)="setLink(1)"> Home
+      </button>
+      <button type="button ml-1 mr-1" class="font-weight-bold btn-text-small btn btn-outline-dark" 
+      (click)="setLink(2)"> Cars
+      </button>
+    </div>
+  </div>
+  <div *ngIf="currentLink == 1" class="row ml-0 mr-0">
+    <app-about></app-about>
+  </div>
+  <div *ngIf="currentLink == 2" class="row ml-0 mr-0">
+    <app-cars></app-cars>
   </div>
 </body>
 
